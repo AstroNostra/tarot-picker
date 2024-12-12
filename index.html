@@ -9,8 +9,11 @@
 <body>
     <div class="container">
         <h1>Tarot Card Picker</h1>
-        <p class="spiritual-message">Use your left hand to pick, as it is connected to the heart side of your being. Take a deep breath and focus. Trust the energy flowing through you.</p>
         
+        <!-- Spiritual Message -->
+        <p class="spiritual-message">Use your left hand to pick, as it is connected to the heart side of your being. Take a deep breath and focus. Trust the energy flowing through you.</p>
+
+        <!-- Spread Selection Buttons -->
         <div class="spread-selection">
             <button onclick="pickCards(1)">1 Card</button>
             <button onclick="pickCards(2)">2 Cards</button>
@@ -19,8 +22,13 @@
             <button onclick="pickProfessionalSpread()">Professional Spread</button>
         </div>
 
+        <!-- Display Picked Cards -->
         <div id="pickedCards" class="picked-cards"></div>
+
+        <!-- Explanation of Spread -->
         <div id="spreadExplanation"></div>
+
+        <!-- Drawn Cards Message -->
         <div id="drawnCardsMessage" class="drawn-cards-message"></div>
     </div>
 
