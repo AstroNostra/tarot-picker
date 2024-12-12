@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astro Nostra Tarot Picker</title>
+    <title>Tarot Picker</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to Astro Nostra</h1>
+    <div class="container">
+        <h1>Welcome to Astro Nostra</h1>
 
-    <!-- Card Pick Options -->
-    <div>
-        <button onclick="pickCard(1)">Pick One Card</button>
-        <button onclick="pickCard(2)">Pick Two Cards</button>
-        <button onclick="pickCard(3)">Pick Three Cards</button>
-    </div>
-    
-    <!-- Display Cards -->
-    <div id="cards">
-        <img id="card1" src="images/The_Magician.jpg" alt="Card 1">
-        <img id="card2" src="images/The_Empress.jpg" alt="Card 2">
-        <img id="card3" src="images/The_Emperor.jpg" alt="Card 3">
+        <div class="card-options">
+            <button id="pick-one">Pick One Card</button>
+            <button id="pick-two">Pick Two Cards</button>
+            <button id="pick-three">Pick Three Cards</button>
+        </div>
+
+        <div class="cards">
+            <div id="card1" class="card"></div>
+            <div id="card2" class="card"></div>
+            <div id="card3" class="card"></div>
+        </div>
     </div>
 
     <script src="script.js"></script>
