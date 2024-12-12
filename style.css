@@ -1,40 +1,51 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    background: linear-gradient(to right, #8A2BE2, #4B0082); /* bluish purple background */
+    background-color: #6a4c9c;
     color: white;
-    margin: 0;
-    padding: 0;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 h1 {
-    margin-top: 20px;
-    font-size: 2.5em;
-    font-weight: bold;
+    font-size: 3em;
+    margin-bottom: 30px;
 }
 
-button {
-    background-color: #4B0082;
-    color: white;
-    padding: 10px 20px;
-    border: none;
+.card-options button {
     font-size: 1.2em;
+    padding: 10px 20px;
+    margin: 10px;
     cursor: pointer;
-    margin: 10px;
+    background-color: #4e2a84;
+    border: none;
+    color: white;
+    border-radius: 5px;
 }
 
-button:hover {
-    background-color: #8A2BE2;
+.card-options button:hover {
+    background-color: #6a4c9c;
 }
 
-#cards img {
-    width: 200px;
-    height: 300px;
-    margin: 10px;
-    opacity: 0.7;
-    transition: opacity 0.3s;
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-#cards img:hover {
-    opacity: 1;
+.card {
+    width: 100px;
+    height: 150px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
 }
