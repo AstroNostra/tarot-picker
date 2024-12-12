@@ -1,56 +1,40 @@
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to right, #6a11cb, #2575fc); /* Bluish purple gradient */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  text-align: center;
-}
-
-.container {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 80%; /* Adjust the container width */
-  max-width: 800px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #8A2BE2, #4B0082); /* bluish purple background */
+    color: white;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
-  color: #5d5d5d;
-  margin-bottom: 30px; /* Add space between the title and buttons */
-}
-
-.button-container {
-  margin-top: 20px;
+    margin-top: 20px;
+    font-size: 2.5em;
+    font-weight: bold;
 }
 
 button {
-  font-size: 16px;
-  margin: 10px;
-  padding: 10px 20px;
-  background-color: #6c5ce7;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+    background-color: #4B0082;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin: 10px;
 }
 
 button:hover {
-  background-color: #5e4bdb;
+    background-color: #8A2BE2;
 }
 
-.card-result {
-  margin-top: 30px; /* Add space between cards and buttons */
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+#cards img {
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
 }
 
-.card-result img {
-  width: 150px;
-  height: auto;
-  border-radius: 5px;
+#cards img:hover {
+    opacity: 1;
 }
