@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #6a11cb, #2575fc); /* Bluish purple gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+}
+
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%; /* Adjust the container width */
+  max-width: 800px;
+}
+
+h1 {
+  color: #5d5d5d;
+  margin-bottom: 30px; /* Add space between the title and buttons */
+}
+
+.button-container {
+  margin-top: 20px;
+}
+
+button {
+  font-size: 16px;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #6c5ce7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #5e4bdb;
+}
+
+.card-result {
+  margin-top: 30px; /* Add space between cards and buttons */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card-result img {
+  width: 150px;
+  height: auto;
+  border-radius: 5px;
+}
