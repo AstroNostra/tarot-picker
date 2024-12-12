@@ -43,6 +43,7 @@ function pickLoveSpread() {
         getRandomCard()
     ];
     displayPickedCards(pickedCards, 'Love Spread');
+    displayLoveSpreadExplanation();
 }
 
 function pickProfessionalSpread() {
@@ -53,6 +54,7 @@ function pickProfessionalSpread() {
         getRandomCard()
     ];
     displayPickedCards(pickedCards, 'Professional Spread');
+    displayProfessionalSpreadExplanation();
 }
 
 function displayPickedCards(pickedCards, spreadType = '') {
@@ -74,4 +76,31 @@ function displayPickedCards(pickedCards, spreadType = '') {
     } else {
         messageElement.textContent = 'Please save the cards names for future readings.';
     }
+}
+
+function displayLoveSpreadExplanation() {
+    const explanation = `
+        <h2>Love Spread Explanation</h2>
+        <ul>
+            <li><strong>Card 1: You</strong> - Represents you, your energy, and current state in the relationship.</li>
+            <li><strong>Card 2: Your Partner</strong> - Represents your partner's energy or attitude in the relationship.</li>
+            <li><strong>Card 3: Problematic</strong> - Identifies the core issue or challenge in your relationship.</li>
+            <li><strong>Card 4: Solution</strong> - Suggests a solution or action to resolve the issue.</li>
+            <li><strong>Card 5: Outcome</strong> - Represents the outcome or future of the relationship based on current energies.</li>
+        </ul>
+    `;
+    document.getElementById('spreadExplanation').innerHTML = explanation;
+}
+
+function displayProfessionalSpreadExplanation() {
+    const explanation = `
+        <h2>Professional Spread Explanation</h2>
+        <ul>
+            <li><strong>Card 1: You</strong> - Represents your current state or position in your career.</li>
+            <li><strong>Card 2: Current Path</strong> - Represents your current career path or job situation.</li>
+            <li><strong>Card 3: Options</strong> - Suggests potential opportunities or choices in your career.</li>
+            <li><strong>Card 4: Outcome</strong> - Indicates the potential outcome of your current career path or options.</li>
+        </ul>
+    `;
+    document.getElementById('spreadExplanation').innerHTML = explanation;
 }
