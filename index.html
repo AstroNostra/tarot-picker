@@ -3,30 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AstroNostra Tarot Picker</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Tarot Picker</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to Astro Nostra Tarot Picker</h1>
-
-        <!-- Buttons for choosing how many cards to pick -->
-        <div id="cardSelection">
-            <button onclick="pickCards(1)">Pick 1 Card</button>
-            <button onclick="pickCards(2)">Pick 2 Cards</button>
-            <button onclick="pickCards(3)">Pick 3 Cards</button>
-            <button onclick="pickLoveSpread()">Love Spread (5 Cards)</button>
-            <button onclick="pickProfessionalSpread()">Professional Spread (4 Cards)</button>
+        <h1>Tarot Card Picker</h1>
+        <p class="spiritual-message">Use your left hand to pick, as it is connected to the heart side of your being. Take a deep breath and focus. Trust the energy flowing through you.</p>
+        
+        <div class="spread-selection">
+            <button onclick="pickCards(1)">1 Card</button>
+            <button onclick="pickCards(2)">2 Cards</button>
+            <button onclick="pickCards(3)">3 Cards</button>
+            <button onclick="pickLoveSpread()">Love Spread</button>
+            <button onclick="pickProfessionalSpread()">Professional Spread</button>
         </div>
 
-        <!-- Area to display picked cards -->
-        <div id="pickedCards"></div>
-
-        <!-- Explanations for Love and Professional Spreads -->
+        <div id="pickedCards" class="picked-cards"></div>
         <div id="spreadExplanation"></div>
-
-        <!-- Text after card draw -->
-        <p id="drawnCardsMessage"></p>
+        <div id="drawnCardsMessage" class="drawn-cards-message"></div>
     </div>
 
     <script src="script.js"></script>
