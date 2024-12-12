@@ -1,90 +1,98 @@
-const tarotCards = [
-  { name: "The Fool", img: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_Fool.jpg.jpg" },
-  { name: "The Magician", img: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_Magician.jpg.jpg" },
-  { name: "The High Priestess", img: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_High_Priestess.jpg.jpg" },
-  { name: "The Empress", img: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_Empress.jpg.jpg" },
-  { name: "The Emperor", img: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_Emperor.jpg.jpg" },
-  { name: "The Hierophant", img: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_Hierophant.jpg.jpg" },
-  { name: "The Lovers", img: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_Lovers.jpg.jpg" },
-  { name: "The Chariot", img: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_Chariot.jpg.jpg" },
-  { name: "Strength", img: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/Strength.jpg.jpg" },
-  { name: "The Hermit", img: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_Hermit.jpg.jpg" },
-  { name: "Wheel of Fortune", img: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/Wheel_of_Fortune.jpg.jpg" },
-  { name: "Justice", img: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/Justice.jpg.jpg" },
-  { name: "The Hanged Man", img: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_Hanged_Man.jpg.jpg" },
-  { name: "Death", img: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/Death.jpg.jpg" },
-  { name: "Temperance", img: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/Temperance.jpg.jpg" },
-  { name: "The Devil", img: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_Devil.jpg.jpg" },
-  { name: "The Tower", img: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_Tower.jpg.jpg" },
-  { name: "The Star", img: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_Star.jpg.jpg" },
-  { name: "The Moon", img: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_Moon.jpg.jpg" },
-  { name: "The Sun", img: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_Sun.jpg.jpg" },
-  { name: "Judgement", img: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/Judgement.jpg.jpg" },
-  { name: "The World", img: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_World.jpg.jpg" }
+const cards = [
+    { name: "The Magician", image: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_Magician.jpg.jpg" },
+    { name: "The High Priestess", image: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_High_Priestess.jpg.jpg" },
+    { name: "The Empress", image: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_Empress.jpg.jpg" },
+    { name: "The Emperor", image: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_Emperor.jpg.jpg" },
+    { name: "The Hierophant", image: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_Hierophant.jpg.jpg" },
+    { name: "The Lovers", image: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_Lovers.jpg.jpg" },
+    { name: "The Chariot", image: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_Chariot.jpg.jpg" },
+    { name: "Strength", image: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/Strength.jpg.jpg" },
+    { name: "The Hermit", image: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_Hermit.jpg.jpg" },
+    { name: "Wheel of Fortune", image: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/Wheel_of_Fortune.jpg.jpg" },
+    { name: "Justice", image: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/Justice.jpg.jpg" },
+    { name: "The Hanged Man", image: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_Hanged_Man.jpg.jpg" },
+    { name: "Death", image: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/Death.jpg.jpg" },
+    { name: "Temperance", image: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/Temperance.jpg.jpg" },
+    { name: "The Devil", image: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_Devil.jpg.jpg" },
+    { name: "The Tower", image: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_Tower.jpg.jpg" },
+    { name: "The Star", image: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_Star.jpg.jpg" },
+    { name: "The Moon", image: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_Moon.jpg.jpg" },
+    { name: "The Sun", image: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_Sun.jpg.jpg" },
+    { name: "Judgement", image: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/Judgement.jpg.jpg" },
+    { name: "The World", image: "https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_World.jpg.jpg" }
 ];
 
-// Function to display the selected cards
+function getRandomCards(numCards) {
+    let selectedCards = [];
+    let tempCards = [...cards];  // Create a copy of the original array
+
+    for (let i = 0; i < numCards; i++) {
+        const randomIndex = Math.floor(Math.random() * tempCards.length);
+        selectedCards.push(tempCards[randomIndex]);
+        tempCards.splice(randomIndex, 1); // Remove the picked card to avoid duplicates
+    }
+
+    return selectedCards;
+}
+
 function displayCards(selectedCards) {
-  const resultDiv = document.getElementById('pickedCards');
-  resultDiv.innerHTML = ''; // Clear the previous results
+    const cardNamesDiv = document.getElementById("cardNames");
+    cardNamesDiv.innerHTML = "";  // Clear previous results
 
-  selectedCards.forEach(card => {
-    const cardDiv = document.createElement('div');
-    cardDiv.classList.add('card');
-    const cardImg = document.createElement('img');
-    cardImg.src = card.img;
-    cardImg.alt = card.name;
-    cardDiv.appendChild(cardImg);
-    const cardName = document.createElement('p');
-    cardName.textContent = card.name;
-    cardDiv.appendChild(cardName);
-    resultDiv.appendChild(cardDiv);
-  });
+    selectedCards.forEach(card => {
+        const img = document.createElement("img");
+        img.src = card.image;
+        img.alt = card.name;
+        const p = document.createElement("p");
+        p.innerText = card.name;
 
-  // Display the message to save the card names
-  const messageDiv = document.createElement('div');
-  messageDiv.classList.add('message');
-  messageDiv.textContent = "Please save the cards' names for future readings.";
-  resultDiv.appendChild(messageDiv);
+        cardNamesDiv.appendChild(img);
+        cardNamesDiv.appendChild(p);
+    });
 }
 
-// Function to pick 1 card randomly for a spread
-function pickCards(numCards) {
-  const selectedCards = [];
-  for (let i = 0; i < numCards; i++) {
-    const randomIndex = Math.floor(Math.random() * tarotCards.length);
-    selectedCards.push(tarotCards[randomIndex]);
-  }
-  displayCards(selectedCards);
+function pickCards(num) {
+    const selectedCards = getRandomCards(num);
+    displayCards(selectedCards);
 }
 
-// Function for the Love Spread (5 cards)
 function pickLoveSpread() {
-  const loveSpreadExplanation = 'The Love Spread focuses on your relationship: Card 1: You, Card 2: Your Partner, Card 3: The Problematic, Card 4: The Solution, Card 5: The Outcome.';
-  document.getElementById('spreadExplanation').textContent = loveSpreadExplanation;
+    const selectedCards = getRandomCards(5);
+    const loveSpread = [
+        { name: "You", card: selectedCards[0] },
+        { name: "Your Partner", card: selectedCards[1] },
+        { name: "Problemetique", card: selectedCards[2] },
+        { name: "Solution", card: selectedCards[3] },
+        { name: "Outcome", card: selectedCards[4] }
+    ];
 
-  const loveSpreadCards = [
-    tarotCards[Math.floor(Math.random() * tarotCards.length)],  // Card 1: You
-    tarotCards[Math.floor(Math.random() * tarotCards.length)],  // Card 2: Your Partner
-    tarotCards[Math.floor(Math.random() * tarotCards.length)],  // Card 3: The Problematic
-    tarotCards[Math.floor(Math.random() * tarotCards.length)],  // Card 4: The Solution
-    tarotCards[Math.floor(Math.random() * tarotCards.length)]   // Card 5: The Outcome
-  ];
-
-  displayCards(loveSpreadCards);
+    displaySpread(loveSpread);
 }
 
-// Function for the Professional Spread (4 cards)
 function pickProfessionalSpread() {
-  const professionalSpreadExplanation = 'The Professional Spread focuses on your career path: Card 1: You, Card 2: Current Path, Card 3: Options, Card 4: Outcome.';
-  document.getElementById('spreadExplanation').textContent = professionalSpreadExplanation;
+    const selectedCards = getRandomCards(4);
+    const professionalSpread = [
+        { name: "You", card: selectedCards[0] },
+        { name: "Current Path", card: selectedCards[1] },
+        { name: "Options", card: selectedCards[2] },
+        { name: "Outcome", card: selectedCards[3] }
+    ];
 
-  const professionalSpreadCards = [
-    tarotCards[Math.floor(Math.random() * tarotCards.length)],  // Card 1: You
-    tarotCards[Math.floor(Math.random() * tarotCards.length)],  // Card 2: Current Path
-    tarotCards[Math.floor(Math.random() * tarotCards.length)],  // Card 3: Options
-    tarotCards[Math.floor(Math.random() * tarotCards.length)]   // Card 4: Outcome
-  ];
+    displaySpread(professionalSpread);
+}
 
-  displayCards(professionalSpreadCards);
+function displaySpread(spread) {
+    const cardNamesDiv = document.getElementById("cardNames");
+    cardNamesDiv.innerHTML = "";  // Clear previous results
+
+    spread.forEach(spreadCard => {
+        const img = document.createElement("img");
+        img.src = spreadCard.card.image;
+        img.alt = spreadCard.card.name;
+        const p = document.createElement("p");
+        p.innerText = `${spreadCard.name}: ${spreadCard.card.name}`;
+
+        cardNamesDiv.appendChild(img);
+        cardNamesDiv.appendChild(p);
+    });
 }
