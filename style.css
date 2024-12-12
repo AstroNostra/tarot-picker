@@ -1,59 +1,62 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #4b6cb7, #182848); /* Blueish purple background */
-    color: white;
+    background-color: #2e2e2e;
+    color: #f2f2f2;
+    margin: 0;
+    padding: 0;
     text-align: center;
-    padding: 20px;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 2.5rem;
+    color: #ffd700;
     margin-bottom: 20px;
 }
 
-#cardSelection button {
-    margin: 10px;
-    padding: 10px 20px;
-    background-color: #6a4af3;
+.spiritual-message {
+    font-size: 1.2rem;
+    color: #9c27b0;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.spread-selection button {
+    background-color: #9c27b0;
+    color: #fff;
     border: none;
-    color: white;
-    font-size: 18px;
+    padding: 15px;
+    margin: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 1.1rem;
+    border-radius: 5px;
 }
 
-#cardSelection button:hover {
-    background-color: #8c63f3;
+.spread-selection button:hover {
+    background-color: #673ab7;
 }
 
-#pickedCards {
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;  /* Adjust the gap between the images */
-    flex-wrap: nowrap;  /* Prevent wrapping, ensuring images stay in a single row */
-    overflow-x: auto;  /* Adds horizontal scrolling if images overflow */
-    padding-bottom: 10px;
-}
-
-#pickedCards img {
-    max-width: 150px;  /* Adjust the max-width as needed */
-    max-height: 250px; /* Adjust the max-height as needed */
+.picked-cards img {
+    max-width: 250px;
+    max-height: 350px;
+    margin: 10px;
     object-fit: contain;
-    transition: transform 0.2s;  /* Optional: adds a smooth zoom effect on hover */
+    display: inline-block;
 }
 
-#pickedCards img:hover {
-    transform: scale(1.1);  /* Optional: zooms the image slightly on hover */
-}
-
-#drawnCardsMessage {
+.drawn-cards-message {
+    font-size: 1.2rem;
     margin-top: 20px;
-    font-size: 18px;
-    color: #d1d1d1;
+    color: #fff;
+    font-style: italic;
+}
+
+#spreadExplanation {
+    margin-top: 30px;
+    color: #f2f2f2;
 }
