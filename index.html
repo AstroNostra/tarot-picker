@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astronostra Tarot Picker</title>
+    <title>AstroNostra Tarot Picker</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to AstroNostra</h1>
-    </header>
-    
     <div class="container">
-        <button onclick="pickCards(1)">Pick 1 Card</button>
-        <button onclick="pickCards(2)">Pick 2 Cards</button>
-        <button onclick="pickCards(3)">Pick 3 Cards</button>
-        <button onclick="pickLoveSpread()">Love Spread (5 Cards)</button>
-        <button onclick="pickProfessionalSpread()">Professional Spread (4 Cards)</button>
-        
-        <div id="pickedCards">
-            <h2>Picked Cards:</h2>
-            <div id="cardNames"></div>
-            <p>Please save the card names for future readings.</p>
+        <h1>Welcome to Astro Nostra Tarot Picker</h1>
+
+        <!-- Buttons for choosing how many cards to pick -->
+        <div id="cardSelection">
+            <button onclick="pickCards(1)">Pick 1 Card</button>
+            <button onclick="pickCards(2)">Pick 2 Cards</button>
+            <button onclick="pickCards(3)">Pick 3 Cards</button>
+            <button onclick="pickLoveSpread()">Love Spread (5 Cards)</button>
+            <button onclick="pickProfessionalSpread()">Professional Spread (4 Cards)</button>
         </div>
+
+        <!-- Area to display picked cards -->
+        <div id="pickedCards"></div>
+
+        <!-- Text after card draw -->
+        <p id="drawnCardsMessage"></p>
     </div>
 
     <script src="script.js"></script>
