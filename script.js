@@ -22,37 +22,40 @@ const cards = [
     { name: 'The World', image: 'https://raw.githubusercontent.com/astronostra/tarot-picker/main/images/The_World.jpg.jpg' }
 ];
 
-function getRandomCard() {
-    return cards[Math.floor(Math.random() * cards.length)];
+function getRandomCard(usedCards) {
+    let card;
+    do {
+        card = cards[Math.floor(Math.random() * cards.length)];
+    } while (usedCards.includes(card)); // Ensure no duplicate card
+    usedCards.push(card); // Mark card as used
+    return card;
 }
 
 function pickCards(numCards) {
     const pickedCards = [];
+    const usedCards = [];
     for (let i = 0; i < numCards; i++) {
-        pickedCards.push(getRandomCard());
+        pickedCards.push(getRandomCard(usedCards));
     }
     displayPickedCards(pickedCards);
 }
 
 function pickLoveSpread() {
-    const pickedCards = [
-        getRandomCard(),
-        getRandomCard(),
-        getRandomCard(),
-        getRandomCard(),
-        getRandomCard()
-    ];
+    const pickedCards = [];
+    const usedCards = [];
+    for (let i = 0; i < 5; i++) {
+        pickedCards.push(getRandomCard(usedCards));
+    }
     displayPickedCards(pickedCards, 'Love Spread');
     displayLoveSpreadExplanation();
 }
 
 function pickProfessionalSpread() {
-    const pickedCards = [
-        getRandomCard(),
-        getRandomCard(),
-        getRandomCard(),
-        getRandomCard()
-    ];
+    const pickedCards = [];
+    const usedCards = [];
+    for (let i = 0; i < 4; i++) {
+        pickedCards.push(getRandomCard(usedCards));
+    }
     displayPickedCards(pickedCards, 'Professional Spread');
     displayProfessionalSpreadExplanation();
 }
