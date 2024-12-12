@@ -48,7 +48,7 @@ function displayCards(selectedCards) {
   resultDiv.appendChild(messageDiv);
 }
 
-// Function to pick 3 cards for a spread
+// Function to pick 1 card randomly for a spread
 function pickCards(numCards) {
   const selectedCards = [];
   for (let i = 0; i < numCards; i++) {
@@ -58,7 +58,7 @@ function pickCards(numCards) {
   displayCards(selectedCards);
 }
 
-// Function for the Love Spread (random selection for each card)
+// Function for the Love Spread (5 cards)
 function pickLoveSpread() {
   const loveSpreadExplanation = 'The Love Spread focuses on your relationship: Card 1: You, Card 2: Your Partner, Card 3: The Problematic, Card 4: The Solution, Card 5: The Outcome.';
   document.getElementById('spreadExplanation').textContent = loveSpreadExplanation;
@@ -74,7 +74,7 @@ function pickLoveSpread() {
   displayCards(loveSpreadCards);
 }
 
-// Function for the Professional Spread (random selection for each card)
+// Function for the Professional Spread (4 cards)
 function pickProfessionalSpread() {
   const professionalSpreadExplanation = 'The Professional Spread focuses on your career path: Card 1: You, Card 2: Current Path, Card 3: Options, Card 4: Outcome.';
   document.getElementById('spreadExplanation').textContent = professionalSpreadExplanation;
