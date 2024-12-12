@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astro Nostra Tarot Picker</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AstroNostra Tarot Picker</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="container">
     <h1>Welcome to Astro Nostra</h1>
 
-    <div>
-        <button onclick="pickCards(1)">Pick 1 Card</button>
-        <button onclick="pickCards(2)">Pick 2 Cards</button>
-        <button onclick="pickCards(3)">Pick 3 Cards</button>
+    <p id="spreadExplanation">Choose a spread and draw cards to get your reading!</p>
+
+    <div class="buttons">
+      <button onclick="pickCards(1)">Pick 1 Card</button>
+      <button onclick="pickCards(2)">Pick 2 Cards</button>
+      <button onclick="pickCards(3)">Pick 3 Cards</button>
+      <button onclick="pickLoveSpread()">Love Spread (5 Cards)</button>
+      <button onclick="pickProfessionalSpread()">Professional Spread (4 Cards)</button>
     </div>
 
-    <div id="picked-cards">
-        <!-- Cards will be displayed here -->
-    </div>
+    <div id="pickedCards" class="cards-container"></div>
+  </div>
 
-    <script src="script.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
